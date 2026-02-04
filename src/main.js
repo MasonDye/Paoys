@@ -1,4 +1,4 @@
-const { app, BrowserWindow, Tray, Menu, ipcMain, screen, nativeImage } = require("electron");
+const { app, BrowserWindow, Tray, Menu, ipcMain, screen, nativeImage, shell } = require("electron");
 const fs = require("fs");
 const path = require("path");
 
@@ -234,6 +234,13 @@ function rebuildTrayMenu() {
     ...variantItems,
     { type: "separator" },
     {
+      label: "GitHub",
+      click: () => {
+        shell.openExternal("https://github.com/MasonDye/Paoys");
+      },
+    },
+    { type: "separator" },
+    {
       label: "Quit",
       click: () => app.quit(),
     },
@@ -375,3 +382,5 @@ app.on("window-all-closed", () => {
     app.quit();
   }
 });
+
+

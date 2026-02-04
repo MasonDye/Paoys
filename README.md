@@ -1,5 +1,7 @@
 # Paoys
 
+![Paoys hero](/assets/preview/paoys-screen.png)
+
 This project is a fork and adaptation based on the projects below.
 
 Paoys is a Windows desktop companion that follows your mouse, sleeps on the taskbar, or roams along it.
