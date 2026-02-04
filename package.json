@@ -23,7 +23,8 @@
       "package.json"
     ],
     "win": {
-      "target": "nsis"
+      "target": "nsis",
+      "icon": "assets/tray.ico"
     }
   }
 }
