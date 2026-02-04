@@ -7,9 +7,23 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "build": "electron-builder --win --x64"
   },
   "devDependencies": {
-    "electron": "^30.0.0"
+    "electron": "^30.0.0",
+    "electron-builder": "^25.1.8"
+  },
+  "build": {
+    "appId": "com.paoys.desktop",
+    "productName": "Paoys",
+    "files": [
+      "src/**",
+      "assets/**",
+      "package.json"
+    ],
+    "win": {
+      "target": "nsis"
+    }
   }
 }
